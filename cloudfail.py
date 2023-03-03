@@ -17,6 +17,12 @@ from colorama import Fore, Style
 from DNSDumpsterAPI import DNSDumpsterAPI
 import dns.resolver
 
+# Fix for Python ver 3.10+
+### FIX
+import collections
+collections.Callable = collections.abc.Callable
+### END FIX
+
 colorama.init(Style.BRIGHT)
 
 
